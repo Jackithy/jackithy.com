@@ -70,11 +70,19 @@
   <div class="container">
     <h1>Welcome to my Goofy Ahh Site</h1>
     <p>This site has no purpose and that's the point.</p>
-    <button class="btn" onclick="alert('You clicked the goofy button 💀')">Click me if you goofy</button>
-    <audio autoplay loop>
-      <source src="villager.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <button class="btn" onclick="playGoofySound()">Click me if you goofy</button>
+    <audio id="goofySound" src="villager.mp3" preload="auto"></audio>
   </div>
+
+  <script>
+    function playGoofySound() {
+      const audio = document.getElementById('goofySound');
+      audio.currentTime = 0;
+      audio.play().catch(e => {
+        console.error('Playback failed:', e);
+      });
+      alert('You clicked the goofy button 💀');
+    }
+  </script>
 </body>
 </html>
