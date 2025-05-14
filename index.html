@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goofy Ahh Website</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: url('minecraft.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      color: lime;
+      text-shadow: 2px 2px black;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      animation: spin 20s linear infinite;
+    }
+
+    h1 {
+      font-size: 5rem;
+      animation: bounce 1s infinite;
+    }
+
+    p {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 20px;
+      font-size: 1.5rem;
+      background: #ff00ff;
+      border: 5px dashed yellow;
+      color: white;
+      cursor: pointer;
+      animation: wiggle 0.5s infinite;
+    }
+
+    .btn:hover {
+      background: #00ffff;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    @keyframes spin {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to my Goofy Ahh Site</h1>
+    <p>This site has no purpose and that's the point.</p>
+    <button class="btn" onclick="alert('You clicked the goofy button 💀')">Click me if you goofy</button>
+    <audio autoplay loop>
+      <source src="villager.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</body>
+</html>
